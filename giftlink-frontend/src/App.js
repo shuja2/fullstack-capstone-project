@@ -3,6 +3,9 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import MainPage from './components/MainPage/MainPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
+import DetailsPage from './components/DetailsPage/DetailsPage';
+
 import Navbar from './components/Navbar/Navbar';
 
 function App() {
@@ -15,6 +18,7 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/app" element={<MainPage />} />
         </Routes>
+        <Route path="/app/product/:productId" element={<DetailsPage/>} />
         </>
   );
 }
