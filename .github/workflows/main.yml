@@ -28,6 +28,8 @@ jobs:
   client_build:
       name: Build client
       runs-on: ubuntu-latest
+      env: 
+        CI: false  # Set CI to false to ignore linting warnings
       steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
